@@ -1,0 +1,27 @@
+[user]
+	name = geekontheway
+	email = zxl51@qq.com
+[alias]
+	co = checkout
+	ci = commit
+	st = status
+	br = branch
+	hist = log --pretty=format:\"%h %ad | %s%d [%an]\" --graph --date=short
+	type = cat-file -t
+	dump = cat-file -p
+[apply]
+	whitespace = strip
+[core]
+	excludesfile = ~/.gitignore
+	autocrlf = input
+	safecrlf = true
+[color]
+	status = auto
+	branch = auto
+	interactive = auto
+	diff = auto
+[github]
+	user = *
+	token = *
+[diff]
+	tool = gvimdiff
