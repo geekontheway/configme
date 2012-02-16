@@ -1,0 +1,71 @@
+#I use this for mac lion,but will work for other *nix!
+
+# 设置提示符包含git分支
+
+WHITE="\[\033[0m\]"  
+YELLOW="\[\033[0;33m\]"  
+export PS1="\w:$YELLOW\$(git branch 2>/dev/null | grep '^*' | colrm 1 2)$WHITE\$ "
+
+# 设置path
+export PATH="/usr/local/graylog2/bin:/usr/local/bin:/usr/local/sbin:/usr/local/mysql/bin:$PATH"
+
+# 导入RVM变量
+[[ -s "/Users/bill/.rvm/scripts/rvm" ]] && source "/Users/bill/.rvm/scripts/rvm"
+
+# bash aliases
+
+# system
+
+# show what ports are open locally
+# nmap download url: http://nmap.org/download.html
+alias local_ports='nmap -sT -O localhost'
+
+alias apache_process='ps -ef | grep apache | grep -v grep | wc -l'
+alias topcpu='ps aux | sort -n +2 | tail -10'  # top 10 cpu processes
+alias topmem='ps aux | sort -n +3 | tail -10'  # top 10 memory processes
+alias psg='ps auxf | grep'
+
+alias dua='du -ch --max-depth=1'
+alias duv='du -sch ./*'
+alias duh='du -sch ./.*'
+alias dfh='df -h'
+
+alias ll='ls -l'
+alias la='ls -A'
+alias l='ls -G'
+alias lla='ls -la'
+
+alias t='tree -L 1 -C -h'
+
+alias ..='cd ..'
+alias ...='cd ../../'
+alias ....='cd ../../..'
+alias grep='grep --color'
+
+alias o='open .'
+alias p='ps aux | grep'
+alias m='mate'
+alias v='vim'
+
+alias mkdir='mkdir -p'
+
+# Rails: 
+alias rake="bundle exec rake"  
+
+function touch {
+  dir=`expr "$1" : '\(.*\/\)'`
+  if [ $dir ]
+    then
+mkdir -p $dir
+  fi
+  /usr/bin/touch $1
+}
+
+##
+# Your previous /Users/bill/.bash_login file was backed up as /Users/bill/.bash_login.macports-saved_2012-02-15_at_03:31:10
+##
+
+# MacPorts Installer addition on 2012-02-15_at_03:31:10: adding an appropriate PATH variable for use with MacPorts.
+export PATH=/opt/local/bin:/opt/local/sbin:$PATH
+# Finished adapting your PATH environment variable for use with MacPorts.
+
