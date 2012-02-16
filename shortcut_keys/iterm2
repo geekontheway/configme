@@ -1,0 +1,11 @@
+include ../gnu_readline
+
+windows key     :显示当前标签
+windows + 左右  :切换标签
+windows + 加减  :缩放
+windows + enter :全屏
+windows + f     :配合使用enter键，查找字符
+windows + d     :垂直分割
+windows + shift + d :水平分割
+windows + w     :关闭当前
+   
