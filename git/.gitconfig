@@ -1,27 +1,30 @@
 [user]
 	name = geekontheway
 	email = zxl51@qq.com
-[alias]
-	co = checkout
-	ci = commit
-	st = status
-	br = branch
-	hist = log --pretty=format:\"%h %ad | %s%d [%an]\" --graph --date=short
-	type = cat-file -t
-	dump = cat-file -p
-[apply]
-	whitespace = strip
-[core]
-	excludesfile = ~/.gitignore
-	autocrlf = input
-	safecrlf = true
+	user = geekontheway
+[github]
+	user = geekontheway
+	token = "Set token here"
 [color]
+	diff = auto
 	status = auto
 	branch = auto
 	interactive = auto
-	diff = auto
-[github]
-	user = *
-	token = *
+	ui = auto
 [diff]
-	tool = gvimdiff
+	tool = vimdiff
+[color "branch"]
+	  current = yellow reverse
+	  local = yellow
+	  remote = green
+[color "diff"]
+	  meta = yellow bold
+	  frag = magenta bold
+	  old = red bold
+	  new = green bold
+[color "status"]
+	  added = yellow
+	  changed = green
+	  untracked = cyan
+[mergetool "vimdiff3"]
+	cmd = vim -f -d -c \"wincmd J\" \"$MERGED\" \"$LOCAL\" \"$BASE\" \"$REMOTE\"
