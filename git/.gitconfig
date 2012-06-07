@@ -28,3 +28,5 @@
 	  untracked = cyan
 [mergetool "vimdiff3"]
 	cmd = vim -f -d -c \"wincmd J\" \"$MERGED\" \"$LOCAL\" \"$BASE\" \"$REMOTE\"
+[core]
+	editor = vim
