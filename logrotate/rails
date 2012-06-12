@@ -1,0 +1,11 @@
+/home/geek/emall/log/development.log {
+        daily
+        rotate 30
+        missingok
+        compress
+        sharedscripts
+        postrotate
+                touch /home/geek/emall/tmp/restart.txt
+        endscript
+}
+
